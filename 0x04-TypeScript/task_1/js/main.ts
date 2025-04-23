@@ -17,6 +17,24 @@ interface Teacher {
     contract: false, // Adding extra attribute 'contract'
   };
   
-  // Logging teacher3 to the console
   console.log(teacher3);
+  
+  // -------------------------------------------
+  // ADD THIS BELOW THE EXISTING CODE:
+  
+  // Defining the Directors interface extending Teacher
+  interface Directors extends Teacher {
+    numberOfReports: number;
+  }
+  
+  // Creating a director1 object using the Directors interface
+  const director1: Directors = {
+    firstName: 'John',
+    lastName: 'Doe',
+    location: 'London',
+    fullTimeEmployee: true,
+    numberOfReports: 17,
+  };
+  
+  console.log(director1);
   
